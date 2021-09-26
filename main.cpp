@@ -1,10 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Slot{
+
+
+class Slot
+{
   public:
-  int age;
-  string vehicle_registration_number;
-  bool booked;
+        int age;
+        string vehicle_registration_number;
+        bool booked;
 
   Slot()
   {
@@ -13,10 +16,12 @@ class Slot{
     this->vehicle_registration_number="";
   }
 };
-class ParkingLot{
+
+class ParkingLot
+{
   public:
-  int number_of_slots;
-  vector<Slot>slots;
+        int number_of_slots;
+        vector<Slot>slots;
 
   ParkingLot(int n)
   {
@@ -24,12 +29,16 @@ class ParkingLot{
     slots.resize(n);
   }
 
-  void book(int age,string vehicle_registration_number)
+void book(int age,string vehicle_registration_number)
   {
     if(age<1)
-    cout<<"Invalid age of driver!";
+    {
+       cout<<"Invalid age of driver!";
+    }
     else if(vehicle_registration_number.size()!=13)
-    cout<<"Invalid Vehicle registration number!";
+    {
+       cout<<"Invalid Vehicle registration number!";
+    }
     else
     {
       int slot_number=-1;
@@ -42,7 +51,9 @@ class ParkingLot{
         }
       }
       if(slot_number==-1)
-      cout<<"Sorry! Parking lot is full :("<<endl;
+      {
+         cout<<"Sorry! Parking lot is full :("<<endl;
+      }
       else
       {
         this->slots[slot_number].booked=true;
@@ -64,6 +75,7 @@ void leave(int slot_no)
   else
   {
     cout<<"Slot number "<<(slot_no+1)<<" vacated, the car with vehicle registration number \" "<<this->slots[slot_no].vehicle_registration_number <<"\" left the space, the driver of the car was of age "<<this->slots[slot_no].age<<endl;
+
     this->slots[slot_no].booked=false;
     this->slots[slot_no].age=0;
     this->slots[slot_no].vehicle_registration_number="";
@@ -78,14 +90,24 @@ void slotsNumbersForDriversOfAge(int age)
   for(int i=0;i<this->slots.size();i++)
   {
     if(this->slots[i].age==age)
-    slot_numbers.push_back(i+1);
+    {
+       slot_numbers.push_back(i+1);
+    }
   }
-   if(slot_numbers.size()==0)
-   cout<<"No cars with age "<<age<<" parked!"<<endl;
-   else {
+
+
+  if(slot_numbers.size()==0)
+   {
+      cout<<"No cars with age "<<age<<" parked!"<<endl;
+   }
+   else
+    {
+    cout<<"Cars are parked at slot ";
      for(int i=0;i<slot_numbers.size()-1;i++)
-     cout<<slot_numbers[i]<<",";
-     cout<<slot_numbers[slot_numbers.size()-1]<<endl;
+     {
+         cout<<slot_numbers[i]<<",";
+     }   
+      cout<<slot_numbers[slot_numbers.size()-1]<<endl;  
    }
    
 }
@@ -100,15 +122,20 @@ void slotNumberForVehicleRegistrationNumber(string vrn)
         break;
       }
     }
+    
     if (slot_number == -1)
-      cout << "No car with vehicle registration number " << vrn << " parked!\n";
+    {
+       cout << "No car with vehicle registration number " << vrn << " parked!\n";
+    }
     else
       cout << slot_number << endl;
   }
-  
- void vehicleRegistrationNumberOfAge(int age)
+
+ 
+void vehicleRegistrationNumberOfAge(int age)
  {
-   vector<pair<string,int>>vehicle_registration_numbers;
+  vector<pair<string,int>>vehicle_registration_numbers;
+
   for(int i=0;i<this->number_of_slots;i++)
   {
     if(this->slots[i].age==age)
@@ -116,15 +143,23 @@ void slotNumberForVehicleRegistrationNumber(string vrn)
       vehicle_registration_numbers.push_back({this->slots[i].vehicle_registration_number,i+1});
     }
   }
-    if (vehicle_registration_numbers.size() == 0)
+
+  if (vehicle_registration_numbers.size() == 0)
       cout << "No cars with age " << age << " parked!\n";
-    else
+       
+  else
+    {
       for (int i = 0; i < vehicle_registration_numbers .size(); i++)
-        cout << "Car with vehicle registration number " << vehicle_registration_numbers [i].first << " has been parked at slot number " << vehicle_registration_numbers[i].second << endl;
+      {
+          cout  << vehicle_registration_numbers [i].first << "  " << vehicle_registration_numbers[i].second << endl;
+      }
+    }
   
   }
 };
-  void help()
+
+
+void help()
 {
   vector<string> commands = {
       "help",

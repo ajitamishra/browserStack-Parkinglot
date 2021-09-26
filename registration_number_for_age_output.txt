@@ -1,0 +1,11 @@
+Created parking of 5 slots
+Car with vehicle registration number "KA-01-HH-1234" has been parked at slot number 1
+Car with vehicle registration number "PB-01-HH-1234" has been parked at slot number 2
+Car with vehicle registration number "PB-02-HH-1234" has been parked at slot number 3
+Car with vehicle registration number "PB-03-HH-1234" has been parked at slot number 4
+Car with vehicle registration number "PB-04-HH-1234" has been parked at slot number 5
+Sorry! Parking lot is full :(
+No cars with age 18 parked!
+Car with vehicle registration number PB-03-HH-1234 has been parked at slot number 4
+No cars with age 25 parked!
+No cars with age 32 parked!

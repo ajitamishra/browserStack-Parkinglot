@@ -1,0 +1,10 @@
+Create_parking_lot 5
+Park KA-01-HH-1234 driver_age 21
+Park PB-01-HH-1234 driver_age 21
+Park PB-02-HH-1234 driver_age 30
+Park PB-03-HH-1234 driver_age 28
+Park PB-04-HH-1234 driver_age 21
+Slot_numbers_for_driver_of_age 21
+Slot_numbers_for_driver_of_age 20
+Slot_numbers_for_driver_of_age 30
+Slot_numbers_for_driver_of_age 50

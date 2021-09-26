@@ -1,0 +1,8 @@
+Create_parking_lot 5
+Park KA-01-HH-1234 driver_age 21
+Park PB-01-HH-1234 driver_age 21
+Park PB-02-HH-1234 driver_age 30
+Park PB-03-HH-1234 driver_age 28
+Park PB-04-HH-1234 driver_age 21
+Vehicle_registration_number_for_driver_of_age 18
+Vehicle_registration_number_for_driver_of_age 21
