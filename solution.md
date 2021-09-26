@@ -84,6 +84,9 @@ To vacate the slot
 
  type help in command prompt to see the list of commands available
 
+ ### exit
+
+type exit to stop execution
 
 
 
